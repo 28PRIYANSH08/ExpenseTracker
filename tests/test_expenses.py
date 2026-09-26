@@ -9,13 +9,13 @@ def test_add_expense():
     expenses = view_expenses()
     assert len(expenses) > 0
     
-    def test_delete_expense():
-        expenses = view_expenses()
+def test_delete_expense():
+    expenses = view_expenses()
         
-        expense_id = expenses[-1][0]
-        delete_expense(expense_id)
-        updated_expenses = view_expenses()
-        ids = [expense[0] for expense in updated_expenses]
-        assert expense_id not in ids
+    expense_id = expenses[-1][0]
+    delete_expense(expense_id)
+    updated_expenses = view_expenses()
+    ids = [expense[0] for expense in updated_expenses]
+    assert expense_id not in ids
         
-    print("Expenses tests passed successfully!")
+print("Expenses tests passed successfully!")
